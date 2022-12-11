@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import signature from "../../Assets/Signature/signature (1).png";
 
 const Navbar = () => {
   return (
@@ -46,8 +47,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
-          Siam
+        <Link to="/" className="">
+          <div className="h-10">
+            <img className="h-full" src={signature} alt="" />
+          </div>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">

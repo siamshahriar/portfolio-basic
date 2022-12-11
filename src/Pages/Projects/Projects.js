@@ -16,7 +16,7 @@ const Projects = () => {
 
           <div className="grid grid-cols-1 gap-3 mt-8 xl:mt-12 xl:gap-12 lg:grid-cols-3">
             {/* first  */}
-            <div className="card bg-base-200 shadow-xl">
+            <div className="card bg-base-300 shadow-xl">
               <figure>
                 <img src={image1} alt="Shoes" />
               </figure>
@@ -26,7 +26,7 @@ const Projects = () => {
                   <div className="badge badge-secondary">NEW</div>
                 </h2>
                 <p>A place to buy and sell used phones, tablets</p>
-                <div className="card-actions justify-end">
+                <div className="card-actions justify-end mt-6">
                   <div className="badge badge-outline">ReactJs</div>
                   <div className="badge badge-outline">TailwindCSS</div>
                   <div className="badge badge-outline">MongoDB</div>

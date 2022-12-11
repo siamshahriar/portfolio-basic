@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const Contact = () => {
-  const handleFormSubmit = (e) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ymmtrpc",
+        "template_nq9ojah",
+        form.current,
+        "7GEdgEO4_1CUoafNl"
+      )
+      .then(
+        (result) => {
+          toast.success("Messege has been sent !");
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
+
   return (
     <div>
       <section className="min-h-[863px] max-w-[1500px] mx-auto lg:flex">
@@ -98,7 +121,7 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col justify-center w-full p-8 pt-0 lg:w-1/2 lg:px-12 xl:px-24 bg-base-300">
-          <form onSubmit={handleFormSubmit}>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="-mx-2 md:items-center md:flex">
               <div className="flex-1 px-2">
                 <label className="block mb-2 text-sm text-gray-400 ">
@@ -106,6 +129,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
+                  name="user_name"
                   placeholder="John Doe"
                   className="block w-full px-5 py-3 mt-2 text-gray-200 placeholder-gray-400 bg-base-100 border border-gray-200 rounded-md   focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -117,6 +141,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
+                  name="user_email"
                   placeholder="johndoe@example.com"
                   className="block w-full px-5 py-3 mt-2 text-gray-200 placeholder-gray-400 bg-base-100 border border-gray-200 rounded-md   focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -128,12 +153,16 @@ const Contact = () => {
                 Message
               </label>
               <textarea
+                name="message"
                 className="block w-full h-32 px-5 py-3 mt-2 text-gray-200 placeholder-gray-400 bg-base-100 border border-gray-200 rounded-md md:h-56   focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                 placeholder="Message"
               ></textarea>
             </div>
 
-            <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+            <button
+              type="submit"
+              className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50"
+            >
               get in touch
             </button>
           </form>
