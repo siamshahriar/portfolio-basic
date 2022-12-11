@@ -73,7 +73,14 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-success">Resume</a>
+        <a
+          href="https://drive.google.com/file/d/1n0G8yXAuZLZvbOaiHhEHIzpdCkk9FPVj/view?usp=share_link"
+          target="_blank"
+          className="btn btn-success text-gray-900"
+          rel="noreferrer"
+        >
+          Resume
+        </a>
       </div>
     </div>
   );

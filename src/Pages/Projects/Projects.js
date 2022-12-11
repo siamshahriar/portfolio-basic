@@ -160,7 +160,7 @@ const Projects = () => {
                 </a>
               </div>
               <div className="flex justify-center pb-4">
-                <Link to="/project1" className="btn btn-secondary w-1/2">
+                <Link to="/project3" className="btn btn-secondary w-1/2">
                   View Details
                 </Link>
               </div>

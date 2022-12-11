@@ -23,12 +23,12 @@ const Banner = () => {
             <a
               href="https://drive.google.com/file/d/1n0G8yXAuZLZvbOaiHhEHIzpdCkk9FPVj/view?usp=share_link"
               target="_blank"
-              className="btn btn-primary text-white"
+              className="btn btn-success text-white"
               rel="noreferrer"
             >
               Resume
             </a>
-            <Link to="/contact" className="btn btn-secondary ml-4 text-white">
+            <Link to="/contact" className="btn btn-outline ml-4 text-white">
               Contact
             </Link>
           </div>
