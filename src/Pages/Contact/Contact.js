@@ -1,20 +1,23 @@
 import React from "react";
 
 const Contact = () => {
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div>
-      <section className="min-h-[863px] bg-white lg:flex">
-        <div className="flex flex-col justify-center w-full p-8 lg:bg-gray-100  lg:px-12 xl:px-32 lg:w-1/2">
-          <h1 className="text-3xl font-semibold text-gray-800 capitalize  lg:text-4xl">
-            hire us.
+      <section className="min-h-[863px] max-w-[1500px] mx-auto lg:flex">
+        <div className="flex flex-col justify-center w-full p-8   lg:px-12 xl:px-32 lg:w-1/2">
+          <h1 className="text-3xl font-semibold text-gray-200 capitalize  lg:text-4xl">
+            hire me.
           </h1>
 
-          <p className="mt-4 text-gray-500 ">
-            Ask us everything and we would love to hear from you
+          <p className="mt-4 text-gray-200 ">
+            Ask me everything and I would love to hear from you
           </p>
 
           <div className="mt-6 md:mt-8">
-            <h3 className="font-medium text-gray-600 ">Follow us</h3>
+            <h3 className="font-medium text-gray-400 ">Follow me</h3>
 
             <div className="flex mt-4 -mx-1.5 ">
               <a
@@ -94,38 +97,38 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center w-full p-8 pt-0 lg:w-1/2 lg:px-12 xl:px-24 ">
-          <form>
+        <div className="flex flex-col justify-center w-full p-8 pt-0 lg:w-1/2 lg:px-12 xl:px-24 bg-base-300">
+          <form onSubmit={handleFormSubmit}>
             <div className="-mx-2 md:items-center md:flex">
               <div className="flex-1 px-2">
-                <label className="block mb-2 text-sm text-gray-600 ">
+                <label className="block mb-2 text-sm text-gray-400 ">
                   Full Name
                 </label>
                 <input
                   type="text"
                   placeholder="John Doe"
-                  className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md   focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="block w-full px-5 py-3 mt-2 text-gray-200 placeholder-gray-400 bg-base-100 border border-gray-200 rounded-md   focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
 
               <div className="flex-1 px-2 mt-4 md:mt-0">
-                <label className="block mb-2 text-sm text-gray-600 ">
+                <label className="block mb-2 text-sm text-gray-400 ">
                   Email address
                 </label>
                 <input
                   type="email"
                   placeholder="johndoe@example.com"
-                  className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md   focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="block w-full px-5 py-3 mt-2 text-gray-200 placeholder-gray-400 bg-base-100 border border-gray-200 rounded-md   focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
             </div>
 
             <div className="w-full mt-4">
-              <label className="block mb-2 text-sm text-gray-600 ">
+              <label className="block mb-2 text-sm text-gray-400 ">
                 Message
               </label>
               <textarea
-                className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-56   focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full h-32 px-5 py-3 mt-2 text-gray-200 placeholder-gray-400 bg-base-100 border border-gray-200 rounded-md md:h-56   focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                 placeholder="Message"
               ></textarea>
             </div>

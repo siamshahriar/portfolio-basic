@@ -25,35 +25,35 @@ const About = () => {
         <div>
           <h2 className="text-3xl mb-8">Frontend</h2>
           <div>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">Javascript</span>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">ReactJs</span>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">TailwindCSS</span>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">Bootstrap</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">Javascript</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">ReactJs</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">TailwindCSS</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">Bootstrap</span>
           </div>
         </div>
 
         <div>
           <h2 className="text-3xl mb-6 mt-6">Backend</h2>
           <div>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">ExpressJs</span>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">NodeJs</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">ExpressJs</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">NodeJs</span>
           </div>
         </div>
         <div>
           <h2 className="text-3xl mb-6 mt-6">Database</h2>
           <div>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">MongoDB</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">MongoDB</span>
           </div>
         </div>
 
         <div>
           <h2 className="text-3xl mb-6 mt-6">Tools</h2>
           <div>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">Git</span>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">Github</span>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">Firebase</span>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">Netlify</span>
-            <span className="bg-base-300 p-2 rounded-lg mr-3">Vercel</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">Git</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">Github</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">Firebase</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">Netlify</span>
+            <span className="bg-gray-700 p-2 rounded-lg mr-3">Vercel</span>
           </div>
         </div>
       </div>
