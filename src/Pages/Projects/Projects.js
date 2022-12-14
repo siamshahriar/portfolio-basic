@@ -1,22 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import image1 from "../../Assets/ProjectsThumb/mobile.png";
 import image2 from "../../Assets/ProjectsThumb/business.png";
 import image3 from "../../Assets/ProjectsThumb/bdix.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div>
       <section className="min-h-[863px]">
         <div className="container px-6 py-10 mx-auto">
-          <h1 className="text-3xl font-semibold text-center text-white capitalize lg:text-4xl ">
+          <h1
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            className="text-3xl font-semibold text-center text-white capitalize lg:text-4xl "
+          >
             Projects
           </h1>
 
           <div className="grid grid-cols-1 gap-3 mt-8 xl:mt-12 xl:gap-12 lg:grid-cols-3">
             {/* first  */}
-            <div className="card bg-base-300 shadow-xl">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1500"
+              className="card bg-base-300 shadow-xl"
+            >
               <figure>
                 <img src={image1} alt="Shoes" />
               </figure>
@@ -37,7 +51,7 @@ const Projects = () => {
                 <a
                   href="https://mobile-buy-sell.web.app/"
                   rel="noreferrer"
-                  className="btn btn-secondary"
+                  className="btn btn-primary"
                   target="_blank"
                 >
                   Live-Site
@@ -45,7 +59,7 @@ const Projects = () => {
                 <a
                   href="https://github.com/siamshahriar/mobile-buy-sell-system-client"
                   rel="noreferrer"
-                  className="btn btn-secondary"
+                  className="btn btn-accent"
                   target="_blank"
                 >
                   Client<FaGithub className="ml-1"></FaGithub>
@@ -53,7 +67,7 @@ const Projects = () => {
                 <a
                   href="https://github.com/siamshahriar/mobile-buy-sell-system-server"
                   rel="noreferrer"
-                  className="btn btn-secondary"
+                  className="btn btn-success"
                   target="_blank"
                 >
                   Server<FaGithub className="ml-1"></FaGithub>
@@ -66,7 +80,11 @@ const Projects = () => {
               </div>
             </div>
             {/* second  */}
-            <div className="card bg-base-200 shadow-xl">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              className="card bg-base-200 shadow-xl"
+            >
               <figure>
                 <img src={image2} alt="Shoes" />
               </figure>
@@ -87,7 +105,7 @@ const Projects = () => {
                 <a
                   href="https://business-conslt-service.web.app/"
                   rel="noreferrer"
-                  className="btn btn-secondary"
+                  className="btn btn-primary"
                   target="_blank"
                 >
                   Live-Site
@@ -95,7 +113,7 @@ const Projects = () => {
                 <a
                   href="https://github.com/siamshahriar/business-cons-service-client"
                   rel="noreferrer"
-                  className="btn btn-secondary"
+                  className="btn btn-accent"
                   target="_blank"
                 >
                   Client<FaGithub className="ml-1"></FaGithub>
@@ -103,7 +121,7 @@ const Projects = () => {
                 <a
                   href="https://github.com/siamshahriar/business-cons-service-server"
                   rel="noreferrer"
-                  className="btn btn-secondary"
+                  className="btn btn-primary"
                   target="_blank"
                 >
                   Server<FaGithub className="ml-1"></FaGithub>
@@ -116,7 +134,11 @@ const Projects = () => {
               </div>
             </div>
             {/* third  */}
-            <div className="card bg-base-200 shadow-xl">
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              className="card bg-base-200 shadow-xl"
+            >
               <figure>
                 <img src={image3} alt="Shoes" />
               </figure>
@@ -137,7 +159,7 @@ const Projects = () => {
                 <a
                   href="https://bdix-vpns.web.app/"
                   rel="noreferrer"
-                  className="btn btn-secondary"
+                  className="btn btn-success"
                   target="_blank"
                 >
                   Live-Site
@@ -145,7 +167,7 @@ const Projects = () => {
                 <a
                   href="https://github.com/siamshahriar/Bdix-vpn-client"
                   rel="noreferrer"
-                  className="btn btn-secondary"
+                  className="btn btn-accent"
                   target="_blank"
                 >
                   Client<FaGithub className="ml-1"></FaGithub>
@@ -153,7 +175,7 @@ const Projects = () => {
                 <a
                   href="https://github.com/siamshahriar/bdix-vpn-server"
                   rel="noreferrer"
-                  className="btn btn-secondary"
+                  className="btn btn-primary"
                   target="_blank"
                 >
                   Server<FaGithub className="ml-1"></FaGithub>

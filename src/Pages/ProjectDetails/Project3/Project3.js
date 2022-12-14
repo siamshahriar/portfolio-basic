@@ -87,8 +87,10 @@ const Project3 = () => {
           ...
         </Swiper>
       </div>
-      <p className="mt-8 text-lg font-semibold">
-        Used Technologies:{" "}
+      <p className="mt-10 text-2xl font-semibold text-center">
+        Used Technologies
+      </p>
+      <p className="mt-4 text-lg font-semibold flex flex-wrap justify-center  gap-3 lg:gap-0">
         <span className="bg-gray-700 p-2 rounded-lg text-base mr-3">
           ReactJs
         </span>

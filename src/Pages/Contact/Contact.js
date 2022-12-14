@@ -1,8 +1,14 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -30,7 +36,11 @@ const Contact = () => {
   return (
     <div>
       <section className="min-h-[863px] max-w-[1500px] mx-auto lg:flex">
-        <div className="flex flex-col justify-center w-full p-8   lg:px-12 xl:px-32 lg:w-1/2">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          className="flex flex-col justify-center w-full p-8   lg:px-12 xl:px-32 lg:w-1/2"
+        >
           <h1 className="text-3xl font-semibold text-gray-200 capitalize  lg:text-4xl">
             hire me.
           </h1>
@@ -120,7 +130,11 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center w-full p-8 pt-0 lg:w-1/2 lg:px-12 xl:px-24 bg-base-300">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          className="flex flex-col justify-center w-full p-8 pt-0 lg:w-1/2 lg:px-12 xl:px-24 bg-base-300"
+        >
           <form ref={form} onSubmit={sendEmail}>
             <div className="-mx-2 md:items-center md:flex">
               <div className="flex-1 px-2">

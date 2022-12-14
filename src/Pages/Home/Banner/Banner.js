@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Banner = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div>
       <div className="hero min-h-[863px] bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <img
+            data-aos="fade-right"
+            data-aos-duration="1500"
             src="https://avatars.githubusercontent.com/u/72511886?v=4"
             className="max-w-sm rounded-full border-4 border-cyan-700 shadow-2xl lg:mr-10"
             alt=""
           />
-          <div>
+          <div data-aos="fade-left" data-aos-duration="1500">
             <h1 className="text-3xl font-semibold mb-4">Hello</h1>
             <h1 className="text-xl font-medium mb-6">I'm</h1>
             <h1 className="text-5xl font-bold mb-5">Md. Shahriar Rahman</h1>
